@@ -3,6 +3,7 @@ Zipcode-Finder is an app designed to help people find the zipcode of the address
 
 ---
 
+- The background image of the app changes every 4 seconds to images of various cities across the United States. The first one the user will see is San Francisco.
 ![SAN FRANCISO](assets/img/read_me/san-francisco.png)
 
 ![NASHVILLE](assets/img/read_me/nashville.png)
