@@ -5,7 +5,7 @@ html {
 
 body {
 	width: 100%;
-	background-image: url(../img/new-orleans-bg.jpg);
+	background-image: url(../img/san-francisco-bg.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -30,15 +30,120 @@ p {
 	padding: 10px;
 }
 
+#alert-font {
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	padding: 10px;
+}
 
-/* WEATHER INFO PANEL STYLES */
-#weather-panel {
+
+/* BACKGROUND IMAGES */
+#bg1 {
+	width: 100%;
+	background: url('../img/nashville-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bg2 {
+	width: 100%;
+	background: url('../img/boston-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bg3 {
+	width: 100%;
+	background: url('../img/miami-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bg4 {
+	width: 100%;
+	background: url('../img/nyc-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bg5 {
+	width: 100%;
+	background: url('../img/austin-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bg6 {
+	width: 100%;
+	background: url('../img/chicago-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bg7 {
+	width: 100%;
+	background: url('../img/new-orleans-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bg8 {
+	width: 100%;
+	background: url('../img/san-francisco-bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* ADDRESS PANEL STYLES */
+#address-panel {
 	width: 80%;
 	height: auto;
 	margin: auto;
 	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
-	margin-top: 60px;
+	margin-top: 80px;
 	border: solid rgba(0, 0, 0, 0.25) 10px;
 }
 
@@ -46,7 +151,7 @@ p {
 	margin-bottom: 20px;
 }
 
-.alert-primary {
+.alert-light {
 	margin-top: 20px;
 	display: none;
 }
