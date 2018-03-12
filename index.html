@@ -29,30 +29,31 @@
 
 <body>
 
+
 	<!-- WEATHER INFO PANEL -->
 	<div class="container">
 		<div class="row text-center">
-			<div id="weather-panel" class="col-12 col-sm-10 col-md-8">
+			<div id="address-panel" class="col-12 col-sm-10 col-md-8">
 
 				<!-- APP NAME/TITLE -->
 				<h1>ZIPCODE FINDER</h1>
 				<!-- APP INSTRUCTIONS/INFO -->
-				<p>Search any City name to find the current weather anywhere in the World!</p>
+				<p>Enter Any Address to Find the Zipcode!</p>
 
 				<!-- CITY SEARCH FORM -->
 				<form method="post">
 					<div class="form-group">
-						<input type="text" name="city" id="city" class="form-control" placeholder="Eg. London, Hong Kong, New York City..." />
+						<input type="text" name="address" id="address" class="form-control" placeholder="Eg. 350 5th Ave, New York, NY" />
 					</div>
 
-					<button type="submit" id="find-weather" class="btn btn-primary btn-lg">Submit</button>
+					<button type="submit" id="find-zipcode" class="btn btn-primary btn-lg">Submit</button>
 				</form>
 				<!-- END CITY SEARCH FORM -->
 
 				<!-- SUCCESSFUL WEATHER SEARCH ALERT -->
-				<div class="alert alert-primary" role="alert">
-					<p>Three Day Weather Forecast:</p>
-					<span id="forecast"></span>
+				<div class="alert alert-light" role="alert">
+					<p id="alert-font">The Zipcode for Your Address is:</p>
+					<span id="zipcode"></span>
 				</div>
 
 				<!-- ERROR WEATHER SEARCH ALERT -->
