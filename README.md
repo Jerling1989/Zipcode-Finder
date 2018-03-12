@@ -3,9 +3,9 @@ Zipcode-Finder is an app designed to help people find the zipcode of the address
 
 ---
 
-![SAN FRANCISO](assets/img/read_me/san-franciso.png)
+![SAN FRANCISO](assets/img/read_me/san-francisco.png)
 
-![NASHVILLE](assets/img/read_me/nashvile.png)
+![NASHVILLE](assets/img/read_me/nashville.png)
 
 ![BOSTON](assets/img/read_me/boston.png)
 
