@@ -27,6 +27,7 @@ Zipcode-Finder is an app designed to help people find the zipcode of the address
 - New Orleans, LA
 ![NEW ORLEANS](assets/img/read_me/new-orleans.png)
 
+- Below is an error message the user will see if they submit a search without entering an address, or if the AJAX call on the app fails to connect to the Google Maps Geolocation API.
 ![SERVER ERROR](assets/img/read_me/server-error.png)
 
 ![ADDRESS ERROR](assets/img/read_me/address.png)
