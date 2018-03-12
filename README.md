@@ -30,6 +30,7 @@ Zipcode-Finder is an app designed to help people find the zipcode of the address
 - Below is an error message the user will see if they submit a search without entering an address, or if the AJAX call on the app fails to connect to the Google Maps Geolocation API.
 ![SERVER ERROR](assets/img/read_me/server-error.png)
 
+- This is an error message if the user does not enter a valid address.
 ![ADDRESS ERROR](assets/img/read_me/address.png)
 
 ![ZIPCODE](assets/img/read_me/zipcode.png)
