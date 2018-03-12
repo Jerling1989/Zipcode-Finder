@@ -33,5 +33,6 @@ Zipcode-Finder is an app designed to help people find the zipcode of the address
 - This is an error message if the user does not enter a valid address.
 ![ADDRESS ERROR](assets/img/read_me/address.png)
 
+- This is what the user will see when they succesfully get a zipcode for the address they entered.
 ![ZIPCODE](assets/img/read_me/zipcode.png)
 
