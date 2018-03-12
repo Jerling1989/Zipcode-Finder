@@ -1,37 +1,61 @@
+function run(interval, frames) {
+    var int = 1;
+    
+    function func() {
+        document.body.id = "bg"+int;
+        int++;
+        if(int === frames) { int = 1; }
+    }
+    
+    var swap = window.setInterval(func, interval);
+}
+
+run(4000, 9); //milliseconds, frames
+
+
+
 // CLICK EVENT FOR FORM SUBMIT BUTTON
-$('#find-weather').click(function(event) {
+$('#find-zipcode').click(function(event) {
+
+	var result = false;
+	$('.alert').hide();
+
 	// PREVENT FORM SUBMIT/PAGE RELOAD
 	event.preventDefault();
+
 	
-	// IF FORM INPUT FIELD IS NOT BLANK
-	if ($('#city').val() != '') {
-		// GET VALUE FROM INPUT FIELD AND ADD IT TO PHP URL SEARCH
-		$.get('./assets/php/scraper.php?city='+$('#city').val(), function(data) {
-			// BLOCK ERROR ALERT FROM DISPLAYING
-			$('.alert-danger').css('display', 'none');
-			// ADD DATA FROM PHP SCRAPE TO THE SUCCESSFUL WEATHER SEARCH ALERT
 
-			// ~~~~ MESS AROUND WITH (data), CHANGE CELCIUS NUMBERS TO FAHRENHEIT BEFORE DISPLAYING ~~~~~~ //
-			$('#forecast').html(data);
-			
+	$.ajax({
+      type: 'GET',
+      url: 'https://maps.googleapis.com/maps/api/geocode/xml?address='+encodeURIComponent($("#address").val())+'&key=AIzaSyCfAYdCFC0QYpHFJ-uYp84VL3gZSyyZW30',
+      dataType: 'xml',
+      success: processXML,
+      error: error
+    });
 
-			// FADE IN SUCCESFUL WEATHER ALERT TO DISPLAY
-			$('.alert-primary').fadeIn();
+		function error() {
+			$('.alert-danger').html('Could Not Connect to Server. Please Try Again.');
+      $('.alert-danger').fadeIn();
+		}
 
-			// IF PHP SCRAPE DOES NOT YEILD RESULTS (USER PUT IN INVALID CITY NAME)
-			if(data == '') {
-				// BLOCK SUCCESS ALERT FROM DISPLAYING
-				$('.alert-primary').css('display', 'none');
-				// DISPLAY ERROR ALERT FOR USER TO ENTER A VALID CITY NAME
-				$('.alert-danger').html('Could Not Find Weather Data for that City. Please Try Again.').fadeIn();
-			}
-		});
-	// IF USER DOES NOT ENTER ANYTHING INTO FORM INPUT FIELD
-	} else {
-		// BLOCK SUCCESS ALERT FROM DISPLAYING
-		$('.alert-primary').css('display', 'none');
-		// DISPLAY ERROR ALERT FOR USER TO ENTER A CITY
-		$('.alert-danger').html('Please Enter a City.').fadeIn();
-	}
+    function processXML(xml) {
+      $(xml).find('address_component').each(function() {
+
+        if ($(this).find('type').text() == 'postal_code') {
+
+
+        	$('#zipcode').html($(this).find('long_name').text());
+          $('.alert-light').fadeIn();
+
+          result = true;
+        }
+
+      });
+
+      if (result == false) {
+      	$('.alert-danger').html('Could Not Find Zipcode for that Address. Please Try Again.');
+      	$('.alert-danger').fadeIn();
+      }
+    }
 
 });
